@@ -21,6 +21,12 @@ class ViewController: UIViewController, UIWebViewDelegate {
         
         let v = UIView(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
         v.backgroundColor = UIColor.redColor()
+        v.alpha = 0.5
+        v.layer.cornerRadius = 5
+        v.layer.borderWidth = 1
+        v.layer.borderColor = UIColor.blueColor().CGColor
+
+        self.view.addSubview(v)
         
         
         

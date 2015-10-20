@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
 options: "6962902cbefc8683f0914049e1ba3b92"
-build_time: [498637978, 30724000]
+build_time: [498638756, 234953000]
 inputs: 
-	"/Users/dominik/prace/ios/bi-ios/bi-ios-2015-02/Views/ViewController.swift": [498637976, 0]
+	"/Users/dominik/prace/ios/bi-ios/bi-ios-2015-02/Views/ViewController.swift": [498638755, 0]
 	"/Users/dominik/prace/ios/bi-ios/bi-ios-2015-02/Views/AppDelegate.swift": [498634330, 0]
