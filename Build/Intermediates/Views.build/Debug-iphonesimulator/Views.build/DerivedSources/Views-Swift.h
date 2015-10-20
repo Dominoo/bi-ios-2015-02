@@ -107,12 +107,16 @@ SWIFT_CLASS("_TtC5Views11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIWebView;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC5Views14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIWebView * __null_unspecified webView;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)webViewDidFinishLoad:(UIWebView * __nonnull)webView;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

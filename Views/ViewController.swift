@@ -8,12 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //hide the view
+        webView.hidden = true
+        
+        let v = UIView(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
+        v.backgroundColor = UIColor.redColor()
+        
+        
+        
+        
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let url = NSURL(string: "https://www.apple.com")
+        webView.loadRequest(NSURLRequest(URL: url!))
+        webView.delegate = self
+
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        print(webView.bounds)
+        print(webView.frame)
+
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
